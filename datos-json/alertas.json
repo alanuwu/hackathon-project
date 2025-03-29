@@ -1,0 +1,76 @@
+{
+    "alertas": [
+      {
+        "device_id": "LoRa_00",
+        "timestamp": "2025-03-28T10:17:00Z",
+        "mensaje": "Humedad alta detectada: 61%",
+        "tipo": "humedad_alta"
+      },
+      {
+        "device_id": "LoRa_00",
+        "timestamp": "2025-03-28T10:18:00Z",
+        "mensaje": "Humedad alta detectada: 62%",
+        "tipo": "humedad_alta"
+      },
+      {
+        "device_id": "NB_00",
+        "timestamp": "2025-03-28T10:17:40Z",
+        "mensaje": "Humedad baja detectada: 54%",
+        "tipo": "humedad_baja"
+      },
+      {
+        "device_id": "NB_00",
+        "timestamp": "2025-03-28T10:19:10Z",
+        "mensaje": "Humedad alta detectada: 60%",
+        "tipo": "humedad_alta"
+      },
+      {
+        "device_id": "NB_00",
+        "timestamp": "2025-03-28T10:20:40Z",
+        "mensaje": "Humedad baja detectada: 55%",
+        "tipo": "humedad_baja"
+      },
+      {
+        "device_id": "LoRa_00",
+        "timestamp": "2025-03-28T10:16:30Z",
+        "mensaje": "Humedad alta detectada: 59%",
+        "tipo": "humedad_alta"
+      },
+      {
+        "device_id": "LoRa_00",
+        "timestamp": "2025-03-28T10:19:00Z",
+        "mensaje": "Humedad baja detectada: 56%",
+        "tipo": "humedad_baja"
+      },
+      {
+        "device_id": "NB_00",
+        "timestamp": "2025-03-28T10:21:10Z",
+        "mensaje": "Humedad baja detectada: 56%",
+        "tipo": "humedad_baja"
+      },
+      {
+        "device_id": "LoRa_00",
+        "timestamp": "2025-03-28T10:15:30Z",
+        "mensaje": "Humedad alta detectada: 60%",
+        "tipo": "humedad_alta"
+      },
+      {
+        "device_id": "NB_00",
+        "timestamp": "2025-03-28T10:18:40Z",
+        "mensaje": "Humedad alta detectada: 59%",
+        "tipo": "humedad_alta"
+      },
+      {
+        "device_id": "LoRa_00",
+        "timestamp": "2025-03-28T10:19:30Z",
+        "mensaje": "Humedad baja detectada: 55%",
+        "tipo": "humedad_baja"
+      },
+      {
+        "device_id": "LoRa_00",
+        "timestamp": "2025-03-28T10:20:00Z",
+        "mensaje": "Humedad alta detectada: 58%",
+        "tipo": "humedad_alta"
+      }
+    ]
+  }
