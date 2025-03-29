@@ -18,25 +18,29 @@
     </style>
 </head>
 <body>
-    <header class="navbar navbar-expand-lg navbar-light bg-light p-3">
+    <header class="navbar navbar-expand-lg navbar-light bg-success rounded-4 p-3 my-3 mx-3">
         <div class="container-fluid">
-            <a class="navbar-brand fw-bold text-white" href="#">AIRA Agriculture</a>
+            <a class="navbar-brand fw-bold text-white fs-3" href="../index.html">🌾 AIRA Agriculture</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Sensores</a>
+                    <li class="nav-item dropdown me-5">
+                        <a class="nav-link dropdown-toggle text-white fs-5" href="#" role="button" data-bs-toggle="dropdown">Sensores</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" data-sensor="LoRa_Sensors">LoRa Sensors</a></li>
+                            <li><a class="dropdown-item" href="#" data-sensor="NB_IoT_Sensors">NB-IoT Sensors</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item me-5">
+                        <a class="nav-link text-white fs-5 active" href="../Mediciones/index.html">Mediciones</a>
+                    </li>
+                    <li class="nav-item me-5">
+                        <a class="nav-link text-white fs-5" href="../Riego/riego.html">Riego</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white active" href="./mediciones/index.html">Mediciones</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Riego</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Alertas</a>
+                        <a class="nav-link text-white fs-5" href="../Alertas/alertas.html">Alertas</a>
                     </li>
                 </ul>
             </div>
