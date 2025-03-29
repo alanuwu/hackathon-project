@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agricultura Inteligente</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="main.js" defer></script>
+    <style>
+        .navbar {
+            background-color: #28a745 !important; /* Verde */
+        }
+        .navbar-brand, .nav-link {
+            font-size: 1.25rem; /* Aumentar tamaño de letra */
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar navbar-expand-lg navbar-light bg-light p-3">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold text-white" href="#">AIRA Agriculture</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Sensores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white active" href="./mediciones/index.html">Mediciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Riego</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Alertas</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Mediciones / Estadística</h1>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <div class="col">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">10:15:45</h5>
+                        <p class="card-text">Temperatura: 23.1 °C</p>
+                        <p class="card-text">Humedad: 55 %</p>
+                        <p class="card-text">Batería: 4.0 V</p>
+                        <p class="card-text">Señal: -70 dBm</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">10:17:10</h5>
+                        <p class="card-text">Temperatura: 22.0 °C</p>
+                        <p class="card-text">Humedad: 57 %</p>
+                        <p class="card-text"><span class="fw-bold">Batería:</span> <span class="text-success">3.9 V</span></p>
+                        <p class="card-text">Señal: -75 dBm</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">10:20:40</h5>
+                        <p class="card-text">Temperatura: 21.9 °C</p>
+                        <p class="card-text">Humedad: 55 %</p>
+                        <p class="card-text">Batería: 3.7 V</p>
+                        <p class="card-text">Señal: -79 dBm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
