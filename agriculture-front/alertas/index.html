@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alertas</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            background-color: #28a745 !important; /* Verde */
+        }
+        .navbar-brand, .nav-link {
+            font-size: 1.25rem; /* Aumentar tamaño de letra */
+        }
+        .alert-container {
+            margin: 2rem auto;
+            max-width: 800px;
+        }
+    </style>
+    <!-- Axios CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Enlace al archivo main.js -->
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar navbar-expand-lg navbar-light bg-light p-3">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold text-white" href="#">AIRA Agriculture</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Sensores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="./mediciones/index.html">Mediciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Riego</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white active" href="#">Alertas</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenedor de alertas -->
+    <div class="alert-container">
+        <h1 class="text-center mb-4">Alertas</h1>
+        <div id="alertas" class="list-group">
+            <!-- Las alertas se generarán dinámicamente aquí -->
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
