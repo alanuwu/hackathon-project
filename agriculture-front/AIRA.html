@@ -8,46 +8,49 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="main.js" defer></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Navbar Ejemplo</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-    
-    <header class="navbar">
-        <div class="logo">AIRA Agriculture</div>
-        
-        <div class="menu" id="menu">
-            <a href="Sensores.HTML">Sensores</a>
-            <a href="./mediciones/index.html">Mediciones</a>
-            <a href="#">Riego</a>
-            <a href="#">Alertas</a>
+<header class="navbar">
+    <div class="logo">AIRA Agriculture</div>
+
+    <div class="menu" id="menu">
+        <div class="dropdown">
+            <button class="dropbtn">Sensores
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="/Sensores/Nb_00.HTML">NB_00</a>
+                <a href="/Sensores/NB_01.HTML">NB_01</a>
+                <a href="/Sensores/LoRa_00.HTML">LoRa-00</a>
+                <a href="/Sensores/LoRa_01.HTML">LoRa-01</a>
+            </div>
         </div>
+        <a href="#">Mediciones</a>
+        <a href="#">Riego</a>
+        <a href="#">Alertas</a>
+    </div>
+
+    <div class="toggle-btn" onclick="toggleMenu()">☰</div>
+</header>
+
+<main>
+    <h1>Bienvenido a <br> AIRA Agriculture</h1>
+    <p>Plataforma de agricultura inteligente para monitorear sensores, mediciones y alertas en tiempo real.</p>
     
-        <div class="toggle-btn" onclick="toggleMenu()">☰</div>
-    </header>
- 
-    <main>
-        <h1>Bienvenido a <br> AIRA Agriculture</h1>
-        <p>Plataforma de agricultura inteligente para monitorear sensores, mediciones y alertas en tiempo real.</p>
-<div class="farmIMG">
-    <img src="https://agrio.app/wp-content/uploads/2022/04/field-3616468_1920-e1666052769707.jpg" alt="Inicio" width="1050px" height="650px">
-</div>
-        
-  
-    </main>
-    
-    
-    </body>
-    </html>
-    
+    <div class="farmIMG">
+        <img src="https://agrio.app/wp-content/uploads/2022/04/field-3616468_1920-e1666052769707.jpg" alt="Inicio" width="1050px" height="650px">
+    </div>
+</main>
+
+<script>
+    // Función para el botón hamburguesa
+    function toggleMenu() {
+        const menu = document.getElementById("menu");
+        menu.classList.toggle("active");
+    }
+</script>
 
 </body>
 </html>
