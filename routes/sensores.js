@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require('express'); 
 
 const sensores = express.Router();
 const datos = require("../datos-json/datos-Sensores.json")
