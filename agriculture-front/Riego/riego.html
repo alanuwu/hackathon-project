@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humedad Sensores LoRa_00 y NB_00</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar {
+            background-color: #28a745 !important; /* Verde */
+        }
+        .navbar-brand, .nav-link {
+            font-size: 1.25rem; /* Aumentar tamaño de letra */
+        }
+        .accordion-button {
+            background-color: #28a745 !important; /* Verde */
+            color: white !important;
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: #218838 !important; /* Verde oscuro */
+        }
+        .accordion-body {
+            background-color: #f8f9fa; /* Fondo claro */
+            border: 1px solid #28a745; /* Borde verde */
+            border-radius: 5px;
+            padding: 20px;
+        }
+        .card {
+            border: 1px solid #28a745; /* Borde verde */
+            border-radius: 10px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: scale(1.05); /* Ampliar ligeramente al pasar el mouse */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+        }
+        .card-title {
+            font-size: 1.25rem; /* Aumentar tamaño de título */
+            font-weight: bold;
+        }
+        .card-text {
+            font-size: 1rem; /* Ajustar tamaño de texto */
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar navbar-expand-lg navbar-light bg-light p-3">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold text-white" href="#">AIRA Agriculture</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Sensores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white active" href="#">Mediciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Riego</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Alertas</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mt-5">
+        <div class="accordion" id="sensorDataAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingLoRa">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLoRa" aria-expanded="true" aria-controls="collapseLoRa">
+                        Sensor LoRa_00
+                    </button>
+                </h2>
+                <div id="collapseLoRa" class="accordion-collapse collapse show" aria-labelledby="headingLoRa" data-bs-parent="#sensorDataAccordion">
+                    <div class="accordion-body">
+                        <h2 class="text-center text-success mb-4">Mediciones de Humedad - Sensor LoRa_00</h2>
+                        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="loraDataContainer">
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingNB">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNB" aria-expanded="false" aria-controls="collapseNB">
+                        Sensor NB_00
+                    </button>
+                </h2>
+                <div id="collapseNB" class="accordion-collapse collapse" aria-labelledby="headingNB" data-bs-parent="#sensorDataAccordion">
+                    <div class="accordion-body">
+                        <h2 class="text-center text-success mb-4">Mediciones de Humedad - Sensor NB_00</h2>
+                        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="nbDataContainer">
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="riego.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
