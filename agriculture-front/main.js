@@ -1,24 +1,25 @@
+window.onload = init;
+var headers = {};
+var url = "http://localhost:3000";
 
-
-function toggleMenu() {
-    const menu = document.getElementById('menu');
-    menu.classList.toggle('active');
+function init() {
+        window.location.href = "index.html";
+    
 }
 
+function loadSensores() {
+    axios.get(url + "/sensores")
+    .then(function(res){
+        console.log(res);
+        displaySensores(res.data.message);
+    }).catch(function(err){
+        console.log(err);
+    })
+} 
 
-function cargarDatos() {
-    axios.get('/sensores').then(response => {
-        document.getElementById('Sensores').innerText = JSON.stringify(response.data);
-    });
-    axios.get('mediciones').then(response => {
-        document.getElementById('Mediciones').innerText = JSON.stringify(response.data);
-    });
-    axios.get('/riego').then(response => {
-        document.getElementById('Riego').innerText = JSON.stringify(response.data);
-    });
-    axios.get('/alertas').then(response => {
-        document.getElementById('Alertas').innerText = JSON.stringify(response.data);
-    });
+function displaySensores(sensores) {
+    var body = document.querySelector("body");
+    for(var i = 0; i<pokemon.length; i++){
+        // Crear un nuevo div para cada sensor;
+    }
 }
-
-document.addEventListener("DOMContentLoaded", cargarDatos);
