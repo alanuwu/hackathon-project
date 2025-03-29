@@ -1,0 +1,166 @@
+{
+  "LoRa_Sensors": [
+    {
+      "device_id": "LoRa_00",
+      "timestamp": "2025-03-28T10:15:30Z",
+      "temperature": 22.5,
+      "humidity": 60,
+      "battery": 3.7,
+      "signal_strength": -85
+    },
+    {
+      "device_id": "LoRa_00",
+      "timestamp": "2025-03-28T10:16:00Z",
+      "temperature": 21.8,
+      "humidity": 58,
+      "battery": 3.6,
+      "signal_strength": -80
+    },
+    {
+      "device_id": "LoRa_00",
+      "timestamp": "2025-03-28T10:16:30Z",
+      "temperature": 23.0,
+      "humidity": 59,
+      "battery": 3.8,
+      "signal_strength": -82
+    },
+    {
+      "device_id": "LoRa_00",
+      "timestamp": "2025-03-28T10:17:00Z",
+      "temperature": 22.2,
+      "humidity": 61,
+      "battery": 3.5,
+      "signal_strength": -78
+    },
+    {
+      "device_id": "LoRa_00",
+      "timestamp": "2025-03-28T10:17:30Z",
+      "temperature": 21.9,
+      "humidity": 57,
+      "battery": 3.6,
+      "signal_strength": -79
+    },
+    {
+      "device_id": "LoRa_00",
+      "timestamp": "2025-03-28T10:18:00Z",
+      "temperature": 22.7,
+      "humidity": 62,
+      "battery": 3.9,
+      "signal_strength": -77
+    },
+    {
+      "device_id": "LoRa_00",
+      "timestamp": "2025-03-28T10:18:30Z",
+      "temperature": 23.3,
+      "humidity": 60,
+      "battery": 3.8,
+      "signal_strength": -81
+    },
+    {
+      "device_id": "LoRa_00",
+      "timestamp": "2025-03-28T10:19:00Z",
+      "temperature": 22.1,
+      "humidity": 56,
+      "battery": 3.7,
+      "signal_strength": -83
+    },
+    {
+      "device_id": "LoRa_00",
+      "timestamp": "2025-03-28T10:19:30Z",
+      "temperature": 21.6,
+      "humidity": 55,
+      "battery": 3.6,
+      "signal_strength": -84
+    },
+    {
+      "device_id": "LoRa_00",
+      "timestamp": "2025-03-28T10:20:00Z",
+      "temperature": 22.8,
+      "humidity": 58,
+      "battery": 3.7,
+      "signal_strength": -80
+    }
+  ],
+  "NB_IoT_Sensors": [
+    {
+      "device_id": "NB_00",
+      "timestamp": "2025-03-28T10:15:45Z",
+      "temperature": 23.1,
+      "humidity": 55,
+      "battery": 4.0,
+      "signal_strength": -70
+    },
+    {
+      "device_id": "NB_00",
+      "timestamp": "2025-03-28T10:17:10Z",
+      "temperature": 22.0,
+      "humidity": 57,
+      "battery": 3.9,
+      "signal_strength": -75
+    },
+    {
+      "device_id": "NB_00",
+      "timestamp": "2025-03-28T10:17:40Z",
+      "temperature": 21.5,
+      "humidity": 54,
+      "battery": 3.8,
+      "signal_strength": -72
+    },
+    {
+      "device_id": "NB_00",
+      "timestamp": "2025-03-28T10:18:10Z",
+      "temperature": 22.9,
+      "humidity": 56,
+      "battery": 3.7,
+      "signal_strength": -74
+    },
+    {
+      "device_id": "NB_00",
+      "timestamp": "2025-03-28T10:18:40Z",
+      "temperature": 23.4,
+      "humidity": 59,
+      "battery": 3.6,
+      "signal_strength": -71
+    },
+    {
+      "device_id": "NB_00",
+      "timestamp": "2025-03-28T10:19:10Z",
+      "temperature": 22.3,
+      "humidity": 60,
+      "battery": 3.9,
+      "signal_strength": -76
+    },
+    {
+      "device_id": "NB_00",
+      "timestamp": "2025-03-28T10:19:40Z",
+      "temperature": 21.7,
+      "humidity": 58,
+      "battery": 3.8,
+      "signal_strength": -78
+    },
+    {
+      "device_id": "NB_00",
+      "timestamp": "2025-03-28T10:20:10Z",
+      "temperature": 22.6,
+      "humidity": 57,
+      "battery": 4.0,
+      "signal_strength": -73
+    },
+    {
+      "device_id": "NB_00",
+      "timestamp": "2025-03-28T10:20:40Z",
+      "temperature": 21.9,
+      "humidity": 55,
+      "battery": 3.7,
+      "signal_strength": -79
+    },
+    {
+      "device_id": "NB_00",
+      "timestamp": "2025-03-28T10:21:10Z",
+      "temperature": 23.2,
+      "humidity": 56,
+      "battery": 3.6,
+      "signal_strength": -77
+    }
+  ]
+}

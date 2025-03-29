@@ -1,0 +1,54 @@
+{
+    "Temperatura_LoRa": {
+        "media": 22.39,
+        "mediana": 22.35,
+        "moda": 22.5,
+        "varianza": 0.2808999999999999,
+        "interpretacion_varianza": "Baja",
+        "desviacion_estandar": 0.5299999999999999,
+        "coef_variacion": 2.367128182224207,
+        "interpretacion_coef_variacion": "Baja variabilidad",
+        "rango": 1.6999999999999993,
+        "min": 21.6,
+        "max": 23.3
+    },
+    "Humedad_LoRa": {
+        "media": 58.6,
+        "mediana": 58.5,
+        "moda": 60.0,
+        "varianza": 4.4399999999999995,
+        "interpretacion_varianza": "Moderada",
+        "desviacion_estandar": 2.1071307505705477,
+        "coef_variacion": 3.5957862637722653,
+        "interpretacion_coef_variacion": "Baja variabilidad",
+        "rango": 7.0,
+        "min": 55.0,
+        "max": 62.0
+    },
+    "Temperatura_NB_IoT": {
+        "media": 22.46,
+        "mediana": 22.450000000000003,
+        "moda": 23.1,
+        "varianza": 0.4104,
+        "interpretacion_varianza": "Baja",
+        "desviacion_estandar": 0.6406246951218787,
+        "coef_variacion": 2.8522916078445175,
+        "interpretacion_coef_variacion": "Baja variabilidad",
+        "rango": 1.8999999999999986,
+        "min": 21.5,
+        "max": 23.4
+    },
+    "Humedad_NB_IoT": {
+        "media": 56.7,
+        "mediana": 56.5,
+        "moda": 55.0,
+        "varianza": 3.2099999999999995,
+        "interpretacion_varianza": "Moderada",
+        "desviacion_estandar": 1.7916472867168916,
+        "coef_variacion": 3.1598717578781153,
+        "interpretacion_coef_variacion": "Baja variabilidad",
+        "rango": 6.0,
+        "min": 54.0,
+        "max": 60.0
+    }
+}
