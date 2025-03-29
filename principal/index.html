@@ -10,30 +10,39 @@
     <script src="main.js" defer></script>
 </head>
 <body>
-
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Navbar Ejemplo</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-    
-    <header class="navbar">
-        <div class="logo">AIRA Agriculture</div>
-        
-        <div class="menu" id="menu">
-            <a href="Sensores.HTML">Sensores</a>
-            <a href="#">Mediciones</a>
-            <a href="#">Riego</a>
-            <a href="#">Alertas</a>
+    <header class="navbar navbar-expand-lg navbar-light bg-success rounded-4 p-3 my-3 mx-3">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold text-white fs-3" href="index.html">🌾 AIRA Agriculture</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item me-5">
+                        <a class="nav-link text-white fs-5" href="Sensores/index.html">Sensores</a>
+                    </li>
+                    <li class="nav-item me-5">
+                        <a class="nav-link text-white fs-5" href="Mediciones/index.html">Mediciones</a>
+                    </li>
+                    <li class="nav-item me-5">
+                        <a class="nav-link text-white fs-5 active" href="Riego/riego.html">Riego</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fs-5" href="Alertas/alertas.html">Alertas</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white fs-5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Sensores
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#" data-sensor="LoRa_Sensors">LoRa_Sensors</a></li>
+                            <li><a class="dropdown-item" href="#" data-sensor="NB_IoT_Sensors">NB_IoT_Sensors</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
-    
-        <div class="toggle-btn" onclick="toggleMenu()">☰</div>
     </header>
- 
     <main>
         <h1>Bienvenido a <br> AIRA Agriculture</h1>
         <p>Plataforma de agricultura inteligente para monitorear sensores, mediciones y alertas en tiempo real.</p>
@@ -47,7 +56,3 @@
     
     </body>
     </html>
-    
-
-</body>
-</html>

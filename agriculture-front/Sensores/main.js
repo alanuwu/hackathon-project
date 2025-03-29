@@ -21,25 +21,32 @@ function loadSensores(sensorType) {
                     temperatura: sensor.temperature || "N/A",
                     humedad: sensor.humidity || "N/A",
                     bateria: sensor.battery || "N/A",
-                    senal: sensor.signal_strength || "N/A"
+                    senal: sensor.signal_strength || "N/A",
+                    timestamp: sensor.timestamp || "N/A"
                 }));
+                const timestamp = res.data[sensorType][0]?.timestamp || "N/A";
 
                 // Llamar a la función para mostrar los sensores
-                displaySensores(sensores, sensorType);
+                displaySensores(sensores, sensorType, timestamp);
             } else {
                 console.error(`Formato de respuesta incorrecto para ${sensorType}:`, res.data);
             }
         })
         .catch(function (err) {
-            console.error(`Error al obtener sensores (${sensorType}):`, err);
+            console.error(`Error al obtener sensores (${sensorType}): ${err.message || err}`);
+            alert(`Error al obtener datos de los sensores ${sensorType}. Por favor, inténtelo de nuevo más tarde.`);
         });
 }
 
-function displaySensores(sensores, sensorType) {
+function displaySensores(sensores, sensorType, timestamp) {
     // Preservar el navbar
-    const navbar = document.querySelector("nav");
-    document.body.innerHTML = "";
-    document.body.appendChild(navbar);
+    let mainContent = document.getElementById("main-content");
+    if (!mainContent) {
+        mainContent = document.createElement("div");
+        mainContent.id = "main-content";
+        document.body.appendChild(mainContent);
+    }
+    mainContent.innerHTML = "";
 
     // Crear el contenedor principal
     var container = document.createElement("div");
@@ -48,7 +55,7 @@ function displaySensores(sensores, sensorType) {
     // Agregar el título con la fecha
     var title = document.createElement("h1");
     title.className = "fw-bold text-success";
-    title.innerHTML = `${sensorType.replace("_", " ")} <br> ${new Date().toISOString().split("T")[0]}`; // Fecha actual
+    title.innerHTML = `${sensorType.replace("_", " ")}`;
     container.appendChild(title);
 
     // Crear el contenedor de tarjetas
@@ -66,9 +73,12 @@ function displaySensores(sensores, sensorType) {
             card.className = "col";
         }
 
+        const time = sensor.timestamp !== "N/A" ? new Date(sensor.timestamp).toLocaleTimeString() : "N/A";
+
         card.innerHTML = `
             <div class="card shadow-lg p-3">
-                <h3 class="text-primary">${sensor.nombre}</h3>
+                <h3 class="text-primary">${time}</h3>
+                <p class="mb-1">Nombre: <strong>${sensor.nombre}</strong></p>
                 <p class="mb-1">Temperatura: <strong>${sensor.temperatura} °C</strong></p>
                 <p class="mb-1">Humedad: <strong>${sensor.humedad} %</strong></p>
                 <p class="mb-1">Batería: <strong>${sensor.bateria} V</strong></p>
@@ -81,19 +91,19 @@ function displaySensores(sensores, sensorType) {
     // Agregar las tarjetas al contenedor principal
     container.appendChild(row);
 
-    // Agregar el contenedor principal al cuerpo del documento
-    document.body.appendChild(container);
+    // Agregar el contenedor principal al main content
+    document.getElementById("main-content").appendChild(container);
 }
 
 function setupDropdownEvents() {
-    // Seleccionar los elementos del dropdown
-    const dropdownItems = document.querySelectorAll('a.dropdown-item');
+    // Seleccionar los elementos del dropdown en el navbar
+    const dropdownItems = document.querySelectorAll('.navbar .dropdown-menu a.dropdown-item');
 
     // Agregar eventos de clic a cada elemento del dropdown
     dropdownItems.forEach(item => {
         item.addEventListener("click", function (event) {
             event.preventDefault(); // Evitar el comportamiento predeterminado del enlace
-            const sensorType = item.getAttribute("data-sensor"); // Obtener el tipo de sensor del atributo data-sensor
+            const sensorType = item.dataset.sensor; // Obtener el tipo de sensor del atributo data-sensor
 
             if (sensorType) {
                 loadSensores(sensorType); // Cargar los datos del sensor seleccionado
