@@ -1,0 +1,104 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Estilos de la navbar */
+.navbar {
+    background: #68ae00;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    background:  #5b9702;
+    border-radius: 5px;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+}
+
+/* Estilos para el botón*/
+.toggle-btn {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+    color:  #68ae00;
+    font-weight: bolder;
+}
+
+p {
+    text-align: center;
+    font-weight: bolder;
+}
+
+.farmIMG {
+    text-align: center;
+}
+
+
+/* Contenedor principal */
+.Principal-AIRA {
+    display: grid;
+    grid-template-columns: repeat(5, 2fr);
+    gap: 20px;
+    max-width: 1200px;
+    height: 750px;
+    margin: 0 auto;
+}
+
+/* Estilo de cada div de sensor */
+.Principal-AIRA div {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+
+/* Efecto hover */
+.Principal-AIRA div:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos de los textos */
+h3 {
+    margin: 0 0 10px;
+    color:#68ae00;
+    text-align: center;
+    font-weight: bolder;
+}
+
+p {
+    margin: 5px 0;
+    color: #555;
+}
+
