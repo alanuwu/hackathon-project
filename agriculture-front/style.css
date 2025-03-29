@@ -18,6 +18,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
+    position: relative;
+    z-index: 10;
 }
 
 .navbar a {
@@ -28,7 +30,7 @@ body {
 }
 
 .navbar a:hover {
-    background:  #5b9702;
+    background: #5b9702;
     border-radius: 5px;
 }
 
@@ -37,9 +39,87 @@ body {
     font-weight: bold;
 }
 
+/* Estilos del menú */
 .menu {
     display: flex;
+    gap: 15px;
 }
+
+/* Estilos para el dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Estilos para el botón hamburguesa */
+.toggle-btn {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Estilos boton sensores */
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: #68ae00;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 10;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .toggle-btn {
+        display: block;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+    }
+}
+
 
 /* Estilos para el botón*/
 .toggle-btn {
@@ -101,4 +181,3 @@ p {
     margin: 5px 0;
     color: #555;
 }
-
