@@ -1,3 +1,1 @@
-# Esta es una apí con NODE.JS
-## Alejandro Balderas Ramirez
-Hola a todos
+#Proyecto para Hackathon Troyano 2025
